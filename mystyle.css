@@ -152,6 +152,20 @@ color: white;
 top: 280px;
 width: 700px;
 font-size: 40px;
+height: 1100px;
+}
+
+#showcasebottom
+{
+
+font-family: Updog;
+text-align:center;
+position:relative;
+display: none;
+color: white;
+width: 700px;
+font-size: 50px;
+top: 70px;
 /* background-color: #ffffff; */
 }
 
