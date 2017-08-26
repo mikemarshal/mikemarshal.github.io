@@ -134,13 +134,28 @@ margin:auto;
 text-align:center;
 width:auto;
 max-width:400px;
-position:relative;
+position:absolute;
 margin-top:100px;
-right: 10px;
+left: 240px;
 
 }
 
 #showcase
+{
+
+font-family: Updog;
+text-align:center;
+position:absolute;
+left: 108px;
+display: none;
+color: white;
+top: 280px;
+width: 700px;
+font-size: 40px;
+height: 1100px;
+}
+
+#thisisit
 {
 
 font-family: Updog;
@@ -165,7 +180,7 @@ display: none;
 color: white;
 width: 700px;
 font-size: 40px;
-top: 70px;
+top: 1000px;
 /* background-color: #ffffff; */
 }
 

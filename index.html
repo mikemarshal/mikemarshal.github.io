@@ -5,8 +5,9 @@
 <title>MikeMarshal</title>
 
 <script>
-var forwardtick;
+var whichswitch = 0;
 
+// eye switches on front page //
 function changeEyes1(){
 document.getElementById("game1").style.zIndex = "-1";
 }
@@ -37,32 +38,84 @@ document.getElementById("game5").style.zIndex = "-1";
 function revertEyes5(){
 document.getElementById("game5").style.zIndex = "-3";
 }
+// end eye switches //
+
+// which button clicked //
+function clickedupdog(){
+whichswitch = 1;
+setTimeout(clickme, 160);
+}
+function clickedthisisit(){
+whichswitch = 2;
+setTimeout(clickme, 160);
+}
+// end which button clicked //
+
+
 function clickme(){
-setTimeout(clickmetimer1, 600);
+setTimeout(clickmetimer1, 160);
 document.getElementById("bgr").style.height = "1500px";
 document.getElementById("chunk").style.display = 'none'; 
 document.getElementById("eyesclicked").style.zIndex = "-1";
 document.getElementById("bgr").style.backgroundImage = "url('images/expandimages/gentleman_expand1.png')";
-//document.getElementById("showcase").style.display = 'initial'; 
 }
 function clickmetimer1(){
-setTimeout(clickmetimer2, 600);
+setTimeout(clickmetimer2, 160);
 document.getElementById("bgr").style.backgroundImage = "url('images/expandimages/gentleman_expand2.png')";
 }
 function clickmetimer2(){
-setTimeout(clickmetimer3, 600);
+setTimeout(clickmetimer3, 160);
 document.getElementById("bgr").style.backgroundImage = "url('images/expandimages/gentleman_expand3.png')";
 }
 function clickmetimer3(){
-setTimeout(clickmetimer8, 600);
+setTimeout(clickmetimer8, 160);
 document.getElementById("bgr").style.backgroundImage = "url('images/expandimages/gentleman_expand4.png')";
 }
 function clickmetimer8(){
 document.getElementById("bgr").style.backgroundImage = "url('images/expandimages/gentleman_expand9.png')";
-document.getElementById("showcase").style.display = 'initial'; 
-document.getElementById("showcasebottom").style.display = 'initial'; 
+	if (whichswitch == 1) {
+	document.getElementById("showcase").style.display = 'initial'; 
+	document.getElementById("showcasebottom").style.display = 'initial'; 
+	}
+	else if (whichswitch == 2) {
+	document.getElementById("thisisit").style.display = 'initial'; 
+	}
 }
-
+// reverse functions //
+function clickmereverse(){
+	if (whichswitch == 1) {
+	setTimeout(clickmetimer1reverse, 160);
+	document.getElementById("showcase").style.display = 'none'; 
+	document.getElementById("showcasebottom").style.display = 'none';
+	}
+	else if (whichswitch == 2) {
+	setTimeout(clickmetimer1reverse, 160);
+	document.getElementById("thisisit").style.display = 'none'; 
+	}
+}
+function clickmetimer1reverse(){
+setTimeout(clickmetimer2reverse, 160);
+document.getElementById("bgr").style.backgroundImage = "url('images/expandimages/gentleman_expand4.png')";
+}
+function clickmetimer2reverse(){
+setTimeout(clickmetimer3reverse, 160);
+document.getElementById("bgr").style.backgroundImage = "url('images/expandimages/gentleman_expand3.png')";
+}
+function clickmetimer3reverse(){
+setTimeout(clickmetimer4reverse, 160);
+document.getElementById("bgr").style.backgroundImage = "url('images/expandimages/gentleman_expand2.png')";
+}
+function clickmetimer4reverse(){
+setTimeout(clickmetimer5reverse, 160);
+document.getElementById("bgr").style.backgroundImage = "url('images/expandimages/gentleman_expand1.png')";
+document.getElementById("bgr").style.height = "700px";
+document.getElementById("chunk").style.display = 'initial'; 
+}
+function clickmetimer5reverse(){
+document.getElementById("bgr").style.backgroundImage = "url('images/gentleman_animated.gif')";
+document.getElementById("eyesclicked").style.zIndex = "-10";
+}
+// end reverse functions //
 
 
 function clickmetimer(){
@@ -115,23 +168,30 @@ document.getElementById("showcase").style.display = 'initial';
 				<br>
 				<img src="images/showcase/updog_trial4.gif" alt="Updog Menu" style="width:326px;height:317px;" align="left">				
 				<img src="images/showcase/updog_trial5.gif" alt="Updog Menu" style="width:326px;height:317px;" align="right">	
-					<div id = "showcasebottom">
-					Every level is different... no two levels are the same...
-					<br>
-					<br>
-					See how far you can get and how long you can last...
-					</div>
+				<br><br>
+			</div>
+			<div id = "showcasebottom">
+			<br>
+			<a href="#" onclick="clickmereverse()" onmouseover="" onmouseout=""><h3><-- HOME</h3></a>
+			</div>
 			
-
-
+			<div id ="thisisit">
+				<h1><b>This is it</b></h1>
+				<h3>an abnormal adventure</h3>
+				<br>
+				<video width="576" height="324" controls>
+				<source src="images/showcase/thisisit_fullrender.mp4" type="video/mp4">
+				</video>
+				<br><br><br><br>
+				<a href="#" onclick="clickmereverse()" onmouseover="" onmouseout=""><h3><-- HOME</h3></a>
 			</div>
 			
 			
 			<div id ="chunk">
 
 				<a class="block" style="background:#31353A;width:400px;height:70px;"><h3>A portfolio by and for Michael</h3>filled with unfinished work</a>
-				<a class="block" onmouseover="changeEyes1()" onmouseout="revertEyes1()" style="background:#6B4871;height:70px;"><h3>This is it</h3>adventurous journey </a>
-				<a href="#" onclick="clickme()" class="block" onmouseover="changeEyes2()" onmouseout="revertEyes2()" style="background:#487156;height:70px;"><h3>Updog</h3>a procedural challenge</a>
+				<a href="#" onclick="clickedthisisit()" class="block" onmouseover="changeEyes1()" onmouseout="revertEyes1()" style="background:#6B4871;height:70px;"><h3>This is it</h3>adventurous journey </a>
+				<a href="#" onclick="clickedupdog()" class="block" onmouseover="changeEyes2()" onmouseout="revertEyes2()" style="background:#487156;height:70px;"><h3>Updog</h3>a procedural challenge</a>
 				<a href="works/groundbreak.html" class="block" onmouseover="changeEyes3()" onmouseout="revertEyes3()" style="background:#484E71;width:400px;height:70px;"><h3>Ground Break</h3>a multiplayer VR experience in Unreal (Under Construction)</a>
 				<a class="block" style="background:#48716B;height:90px;"><h3>WIP</h3>Under Construction</a>
 				<a class="block" style="background:#564871;height:90px;"><h3>WIP</h3>Under Construction</a> 
