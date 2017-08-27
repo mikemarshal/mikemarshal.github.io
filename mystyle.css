@@ -175,12 +175,13 @@ height: 1100px;
 
 font-family: Updog;
 text-align:center;
-position:relative;
+position:absolute;
 display: none;
 color: white;
 width: 700px;
 font-size: 40px;
 bottom: 200px;
+right: 105px;
 /* background-color: #ffffff; */
 }
 
