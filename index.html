@@ -79,6 +79,7 @@ document.getElementById("bgr").style.backgroundImage = "url('images/expandimages
 	}
 	else if (whichswitch == 2) {
 	document.getElementById("thisisit").style.display = 'initial'; 
+	document.getElementById("showcasebottom").style.display = 'initial';
 	}
 }
 // reverse functions //
@@ -91,6 +92,7 @@ function clickmereverse(){
 	else if (whichswitch == 2) {
 	setTimeout(clickmetimer1reverse, 160);
 	document.getElementById("thisisit").style.display = 'none'; 
+	document.getElementById("showcasebottom").style.display = 'none';
 	}
 }
 function clickmetimer1reverse(){
@@ -124,21 +126,8 @@ document.getElementById("showcase").style.display = 'initial';
 </script>
 
 </head>
- 
- 
- 
- 
 <body>
-
-
-	
-
-
-	<div class ="firstouter">
-
-
-
-			
+	<div class ="firstouter">			
 		<div id="game1"></div>
 		<div id="game2"></div>
 		<div id="game3"></div>
@@ -159,20 +148,18 @@ document.getElementById("showcase").style.display = 'initial';
 		<div id="bgrexpand9"></div>	
 		<!-- preloaded stuff end !-->		
 		<div id="bgr">
-			
-			
 			<div id ="showcase">
 				<h1><b>Updog</b></h1>
 				<img src="images/showcase/updog_menu.gif" alt="Updog Menu" style="width:449px;height:73px;">
 				<h3>a little procedural game </h3>
 				<br>
-				<img src="images/showcase/updog_trial4.gif" alt="Updog Menu" style="width:326px;height:317px;" align="left">				
-				<img src="images/showcase/updog_trial5.gif" alt="Updog Menu" style="width:326px;height:317px;" align="right">	
+				<img src="images/showcase/updog_trial4.gif" alt="Updog Gameplay 1" style="width:326px;height:317px;" align="left">				
+				<img src="images/showcase/updog_trial5.gif" alt="Updog Gameplay 2" style="width:326px;height:317px;" align="right">	
 				<br><br>
 			</div>
 			<div id = "showcasebottom">
-			<br>
-			<a href="#" onclick="clickmereverse()" onmouseover="" onmouseout=""><h3><-- HOME</h3></a>
+				<br>
+				<a href="#" onclick="clickmereverse()" onmouseover="" onmouseout=""><h3><-- HOME</h3></a>
 			</div>
 			
 			<div id ="thisisit">
@@ -182,32 +169,20 @@ document.getElementById("showcase").style.display = 'initial';
 				<video width="576" height="324" controls>
 				<source src="images/showcase/thisisit_fullrender.mp4" type="video/mp4">
 				</video>
-				<br><br><br><br>
-				<a href="#" onclick="clickmereverse()" onmouseover="" onmouseout=""><h3><-- HOME</h3></a>
-			</div>
-			
-			
+				<br><br>
+				<img src="images/showcase/thisisit_playeridle.gif" alt="This is it gameplay 1" style="width:283px;height:266px;" align="left">				
+				<img src="images/showcase/thisisit_wirtwake.gif" alt="This is it gameplay 2" style="width:283px;height:266px;" align="right">					
+			</div>			
 			<div id ="chunk">
 
-				<a class="block" style="background:#31353A;width:400px;height:70px;"><h3>A portfolio by and for Michael</h3>filled with unfinished work</a>
+				<a class="block" style="background:#31353A;width:400px;height:70px;"><h3>A Portfolio by Michael Marshal</h3>programmer, artist, designer, web developer, composer</a>
 				<a href="#" onclick="clickedthisisit()" class="block" onmouseover="changeEyes1()" onmouseout="revertEyes1()" style="background:#6B4871;height:70px;"><h3>This is it</h3>adventurous journey </a>
 				<a href="#" onclick="clickedupdog()" class="block" onmouseover="changeEyes2()" onmouseout="revertEyes2()" style="background:#487156;height:70px;"><h3>Updog</h3>a procedural challenge</a>
 				<a href="works/groundbreak.html" class="block" onmouseover="changeEyes3()" onmouseout="revertEyes3()" style="background:#484E71;width:400px;height:70px;"><h3>Ground Break</h3>a multiplayer VR experience in Unreal (Under Construction)</a>
 				<a class="block" style="background:#48716B;height:90px;"><h3>WIP</h3>Under Construction</a>
-				<a class="block" style="background:#564871;height:90px;"><h3>WIP</h3>Under Construction</a> 
-				
-			</div>
-		
-		
-		
-		
-		
-		
-
-		</div>
-
-
-	
+				<a class="block" style="background:#564871;height:90px;"><h3>WIP</h3>Under Construction</a> 				
+			</div>		
+		</div>	
 	</div>	
 </body>
 
