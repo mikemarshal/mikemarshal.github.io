@@ -1,6 +1,6 @@
 body {
-		background-color: #232526; 
-} 
+		background-color: #232526;
+}
 .firstouter
 {
 	width:900px;
@@ -8,7 +8,18 @@ body {
     right: 50%;
     bottom: 50%;
     transform: translate(50%,50%);
-    position: absolute;		
+    position: absolute;
+}
+#loader
+{
+	width:900px;
+	height:700px;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%,50%);
+    position: absolute;
+	background-color: #232526;
+	z-index: 10;
 }
 
 #bgr
@@ -248,7 +259,7 @@ background-image: url("images/eyes_lines.gif");
 position:absolute;
 z-index:-5;
 top: 110px;
-left: 270px;	
+left: 270px;
 }
 
 #game2 {
@@ -258,7 +269,7 @@ background-image: url("images/eyes_explode.gif");
 position:absolute;
 z-index:-6;
 top: 110px;
-left: 270px;	
+left: 270px;
 }
 
 #game3 {
@@ -278,7 +289,7 @@ background-image: url("images/eyes_bubble.gif");
 position:absolute;
 z-index:-8;
 top: 110px;
-left: 270px;	
+left: 270px;
 }
 
 #game5 {
@@ -288,7 +299,7 @@ background-image: url("images/eyes_bubble.gif");
 position:absolute;
 z-index:-9;
 top: 110px;
-left: 270px;	
+left: 270px;
 }
 
 #eyesclicked {
@@ -329,4 +340,51 @@ h4{font-size:24px;}
 h5{font-size:20px;}
 h6{font-size:18px;}
 
+.preloader-1 {
+  margin: 300px auto 0;
+  width: 198px;
+  height: 36px;
+	z-index: 11;
+}
 
+#divloader {
+  color: #fff;
+  margin: 15px 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-size: 30px;
+  letter-spacing: 6px;
+}
+
+.preloader-1 .line {
+  width: 12px;
+  height: 100px;
+  background: #fff;
+  margin: 0 3px;
+  display: inline-block;
+  animation: opacity-1 1000ms infinite ease-in-out;
+	z-index: 11;
+}
+
+
+.preloader-1 .line-1, .preloader-2 .line-1 { animation-delay: 800ms; }
+.preloader-1 .line-2, .preloader-2 .line-2 { animation-delay: 600ms; }
+.preloader-1 .line-3, .preloader-2 .line-3 { animation-delay: 400ms; }
+.preloader-1 .line-4, .preloader-2 .line-4 { animation-delay: 200ms; }
+.preloader-1 .line-6, .preloader-2 .line-6 { animation-delay: 200ms; }
+.preloader-1 .line-7, .preloader-2 .line-7 { animation-delay: 400ms; }
+.preloader-1 .line-8, .preloader-2 .line-8 { animation-delay: 600ms; }
+.preloader-1 .line-9, .preloader-2 .line-9 { animation-delay: 800ms; }
+
+@keyframes opacity-1 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

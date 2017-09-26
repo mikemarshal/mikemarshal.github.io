@@ -1,133 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- <link rel="stylesheet" type="text/css" href="mystyle.css"> -->
 <link rel="stylesheet" type="text/css" href="mystyle.css">
 <title>MikeMarshal</title>
-
+<script src="gameportfoliobasic.js"></script>
 <script>
-var whichswitch = 0;
-
-// eye switches on front page //
-function changeEyes1(){
-document.getElementById("game1").style.zIndex = "-1";
-}
-function revertEyes1(){
-document.getElementById("game1").style.zIndex = "-3";
-}
-function changeEyes2(){
-document.getElementById("game2").style.zIndex = "-1";
-}
-function revertEyes2(){
-document.getElementById("game2").style.zIndex = "-3";
-}
-function changeEyes3(){
-document.getElementById("game3").style.zIndex = "-1";
-}
-function revertEyes3(){
-document.getElementById("game3").style.zIndex = "-3";
-}
-function changeEyes4(){
-document.getElementById("game4").style.zIndex = "-1";
-}
-function revertEyes4(){
-document.getElementById("game4").style.zIndex = "-3";
-}
-function changeEyes5(){
-document.getElementById("game5").style.zIndex = "-1";
-}
-function revertEyes5(){
-document.getElementById("game5").style.zIndex = "-3";
-}
-// end eye switches //
-
-// which button clicked //
-function clickedupdog(){
-whichswitch = 1;
-setTimeout(clickme, 160);
-}
-function clickedthisisit(){
-whichswitch = 2;
-setTimeout(clickme, 160);
-}
-// end which button clicked //
-
-
-function clickme(){
-setTimeout(clickmetimer1, 160);
-document.getElementById("bgr").style.height = "1500px";
-document.getElementById("chunk").style.display = 'none'; 
-document.getElementById("eyesclicked").style.zIndex = "-1";
-document.getElementById("bgr").style.backgroundImage = "url('images/expandimages/gentleman_expand1.png')";
-}
-function clickmetimer1(){
-setTimeout(clickmetimer2, 160);
-document.getElementById("bgr").style.backgroundImage = "url('images/expandimages/gentleman_expand2.png')";
-}
-function clickmetimer2(){
-setTimeout(clickmetimer3, 160);
-document.getElementById("bgr").style.backgroundImage = "url('images/expandimages/gentleman_expand3.png')";
-}
-function clickmetimer3(){
-setTimeout(clickmetimer8, 160);
-document.getElementById("bgr").style.backgroundImage = "url('images/expandimages/gentleman_expand4.png')";
-}
-function clickmetimer8(){
-document.getElementById("bgr").style.backgroundImage = "url('images/expandimages/gentleman_expand9.png')";
-	if (whichswitch == 1) {
-	document.getElementById("showcase").style.display = 'initial'; 
-	document.getElementById("showcasebottom").style.display = 'initial'; 
-	}
-	else if (whichswitch == 2) {
-	document.getElementById("thisisit").style.display = 'initial'; 
-	document.getElementById("showcasebottom").style.display = 'initial';
-	}
-}
-// reverse functions //
-function clickmereverse(){
-	if (whichswitch == 1) {
-	setTimeout(clickmetimer1reverse, 160);
-	document.getElementById("showcase").style.display = 'none'; 
-	document.getElementById("showcasebottom").style.display = 'none';
-	}
-	else if (whichswitch == 2) {
-	setTimeout(clickmetimer1reverse, 160);
-	document.getElementById("thisisit").style.display = 'none'; 
-	document.getElementById("showcasebottom").style.display = 'none';
-	}
-}
-function clickmetimer1reverse(){
-setTimeout(clickmetimer2reverse, 160);
-document.getElementById("bgr").style.backgroundImage = "url('images/expandimages/gentleman_expand4.png')";
-}
-function clickmetimer2reverse(){
-setTimeout(clickmetimer3reverse, 160);
-document.getElementById("bgr").style.backgroundImage = "url('images/expandimages/gentleman_expand3.png')";
-}
-function clickmetimer3reverse(){
-setTimeout(clickmetimer4reverse, 160);
-document.getElementById("bgr").style.backgroundImage = "url('images/expandimages/gentleman_expand2.png')";
-}
-function clickmetimer4reverse(){
-setTimeout(clickmetimer5reverse, 160);
-document.getElementById("bgr").style.backgroundImage = "url('images/expandimages/gentleman_expand1.png')";
-document.getElementById("bgr").style.height = "700px";
-document.getElementById("chunk").style.display = 'initial'; 
-}
-function clickmetimer5reverse(){
-document.getElementById("bgr").style.backgroundImage = "url('images/gentleman_animated.gif')";
-document.getElementById("eyesclicked").style.zIndex = "-10";
-}
-// end reverse functions //
-
-
-function clickmetimer(){
-document.getElementById("showcase").style.display = 'initial'; 
-}
+window.onload = function() {
+	var loader = document.getElementById('loader');
+		loader.style.display = 'none';
+};
 </script>
-
 </head>
 <body>
-	<div class ="firstouter">			
+
+	<!-- THE PRELOADER  -->
+<div id="loader">
+	<div class="preloader-1">
+	  <div id="divloader">Loading</div>
+	  <span class="line line-1"></span>
+	  <span class="line line-2"></span>
+	  <span class="line line-3"></span>
+	  <span class="line line-4"></span>
+	  <span class="line line-5"></span>
+	  <span class="line line-6"></span>
+	  <span class="line line-7"></span>
+	  <span class="line line-8"></span>
+	  <span class="line line-9"></span>
+	</div>
+</div>
+	<!-- THE PRELOADER FINISHED -->
+
+	<div class ="firstouter">
 		<div id="game1"></div>
 		<div id="game2"></div>
 		<div id="game3"></div>
@@ -139,22 +43,22 @@ document.getElementById("showcase").style.display = 'initial';
 		<link rel=preload as=image href="images/expandimages/gentleman_expand1.png">
 		<link rel=preload as=image href="images/expandimages/gentleman_expand2.png">
 		<link rel=preload as=image href="images/expandimages/gentleman_expand3.png">
-		<link rel=preload as=image href="images/expandimages/gentleman_expand4.png">	
+		<link rel=preload as=image href="images/expandimages/gentleman_expand4.png">
 		<link rel=preload as=image href="images/expandimages/gentleman_expand9.png">
 		<div id="bgrexpand1"></div>
 		<div id="bgrexpand2"></div>
 		<div id="bgrexpand3"></div>
-		<div id="bgrexpand4"></div>				
-		<div id="bgrexpand9"></div>	
-		<!-- preloaded stuff end !-->		
+		<div id="bgrexpand4"></div>
+		<div id="bgrexpand9"></div>
+		<!-- preloaded stuff end !-->
 		<div id="bgr">
 			<div id ="showcase">
 				<h1><b>Updog</b></h1>
 				<img src="images/showcase/updog_menu.gif" alt="Updog Menu" style="width:449px;height:73px;">
 				<h3>a little procedural game </h3>
 				<br>
-				<img src="images/showcase/updog_trial4.gif" alt="Updog Gameplay 1" style="width:326px;height:317px;" align="left">				
-				<img src="images/showcase/updog_trial5.gif" alt="Updog Gameplay 2" style="width:326px;height:317px;" align="right">	
+				<img src="images/showcase/updog_trial4.gif" alt="Updog Gameplay 1" style="width:326px;height:317px;" align="left">
+				<img src="images/showcase/updog_trial5.gif" alt="Updog Gameplay 2" style="width:326px;height:317px;" align="right">
 				<br><br>
 			</div>
 			<div id ="thisisit">
@@ -166,13 +70,13 @@ document.getElementById("showcase").style.display = 'initial';
 				</video>
 				<br><br>
 				<img src="images/showcase/thisisit_playeridle.gif" alt="This is it gameplay 1" style="width:218px;height:205px;" align="left">
-				<img src="images/showcase/thisisit_turtle.gif" alt="This is it gameplay 2" style="width:218px;height:205px;" align="middle">					
-				<img src="images/showcase/thisisit_wirtwake.gif" alt="This is it gameplay 2" style="width:218px;height:205px;" align="right">		
-			</div>	
+				<img src="images/showcase/thisisit_turtle.gif" alt="This is it gameplay 2" style="width:218px;height:205px;" align="middle">
+				<img src="images/showcase/thisisit_wirtwake.gif" alt="This is it gameplay 2" style="width:218px;height:205px;" align="right">
+			</div>
 			<div id = "showcasebottom">
 				<br>
 				<a href="#" onclick="clickmereverse()" onmouseover="" onmouseout=""><h3><-- HOME</h3></a>
-			</div>			
+			</div>
 			<div id ="chunk">
 
 				<a class="block" style="background:#31353A;width:400px;height:70px;"><h3>A Portfolio by Michael Marshal</h3>programmer, artist, designer, web developer, composer</a>
@@ -180,10 +84,10 @@ document.getElementById("showcase").style.display = 'initial';
 				<a href="#" onclick="clickedupdog()" class="block" onmouseover="changeEyes2()" onmouseout="revertEyes2()" style="background:#487156;height:70px;"><h3>Updog</h3>a procedural challenge</a>
 				<a href="works/groundbreak.html" class="block" onmouseover="changeEyes3()" onmouseout="revertEyes3()" style="background:#484E71;width:400px;height:70px;"><h3>Ground Break</h3>a multiplayer VR experience in Unreal (Under Construction)</a>
 				<a class="block" style="background:#48716B;height:90px;"><h3>WIP</h3>Under Construction</a>
-				<a class="block" style="background:#564871;height:90px;"><h3>WIP</h3>Under Construction</a> 				
-			</div>		
-		</div>	
-	</div>	
+				<a class="block" style="background:#564871;height:90px;"><h3>WIP</h3>Under Construction</a>
+			</div>
+		</div>
+	</div>
 </body>
 
 
